@@ -1,0 +1,173 @@
+
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #E0C799;
+$keyColor: #50aa50;
+$fontColor: #4c4c4c;
+
+
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+// desktop
+@media (min-width: 769px) {
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    @extend .uppercase;
+  }
+}
+
+#header{
+ background-image: url("../images/bear.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+
+   }
+
+@media (min-width: 768px) {
+
+
+  #header{
+      height:500px;
+    
+     }
+   }
+
+
+
+#middle {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);    
+  }
+  h2 {
+    color: $baseColor;
+    margin-bottom: 15px;
+  }
+  .middle-box {
+    @include flex(1);
+    margin: 10px 0;                   
+    padding: 20px;
+    background-color: $baseColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: $keyColor;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+    @extend .block-center;
+       }
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $keyColor;
+    margin-bottom:30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+
+@media (min-width: 769px) {
+
+  #middle {
+    .container {
+      @include flex-direction(row);     
+      justify-content: space-between;
+        }
+    .middle-box {
+      margin: 0 10px;                  
+    }
+  }
+}
+
+#under{
+       .button-readmore {
+          margin: auto;
+          text-align: center;
+          padding: 15px 0;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: $keyColor;
+          @extend .abel;
+          @extend .uppercase;
+          @include border-radius(4px);
+          font-size: 2rem;
+        
+      }
+    }
+@media (min-width: 769px) {
+  #under{
+   .button-readmore {
+            &:hover {
+              background-color: darken($keyColor, 10%);
+          
+         }
+       }
+     }
+   }
