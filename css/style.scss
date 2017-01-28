@@ -20,6 +20,8 @@ body{
   line-height:1.6;
   letter-spacing: 0.1em; 
   background-color: $baseColor;
+  margin: 0;
+  
 }
 
 a {
@@ -70,7 +72,7 @@ section {
 
 #header{
  background-image: url("../images/bear.jpg");
-  height: 250px;
+  height: 245px;
   width: 100%;
   background-size: cover;
   background-position: center center;

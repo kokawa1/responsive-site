@@ -9,7 +9,8 @@ body {
   font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   line-height: 1.6;
   letter-spacing: 0.1em;
-  background-color: #fdfcf6; }
+  background-color: #fdfcf6;
+  margin: 0; }
 
 a {
   color: #50aa50;
@@ -47,7 +48,7 @@ section {
 
 #header {
   background-image: url("../images/bear.jpg");
-  height: 250px;
+  height: 245px;
   width: 100%;
   background-size: cover;
   background-position: center center; }
